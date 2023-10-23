@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.borderr{
+  border-bottom: 4px solid rgba(255, 0, 0, 0);
+  position: relative;
+}
+.borderr_active{
+  /* border-bottom: 4px solid #78D6C6; */
+  position: relative;
+
+}
+
+.borderr_active::after{
+  content: "";
+  position: absolute;
+  background-color: #78D6C6;
+  width: 50%;
+  height: 4px;
+  left: 0 ;
+  bottom: -6.8px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .borderr_active {
+    background-color: #78D6C6;
+    border-bottom: none;
+    color: white;
+    border-radius: 6px;
+    margin: 0px 6px;
+    padding: 5px;
+    width: 100%;
+
+  }
+
+  .borderr_active::after{
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    right: 0 ;
+    bottom: 0;
+
+  
+  }
+}
